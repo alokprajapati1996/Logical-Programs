@@ -1,5 +1,5 @@
 package com.bridgelabz.logicalprogram;
-
+import java.util.Scanner;
 public class LgicalPrograms {
     public static void fibonacciSeries() {
         int n1 = 0, n2 = 1, n3, i, count = 10;
@@ -56,6 +56,19 @@ public class LgicalPrograms {
     }
      System.out.println("The reverse of the given number is: " + reverse);
 }
+public static void stopWatch() {
+    Scanner sc = new Scanner(System.in);
+    long start, end;
+    double tim;
+    System.out.println("Type any character to start the stopwatch");
+    char s = sc.next().charAt(0);
+    start = System.currentTimeMillis();
+    System.out.println("Type any character to stop the stopwatch");
+    char m = sc.next().charAt(0);
+    end = System.currentTimeMillis();
+    tim = (end - start) / 1000.0;
+    System.out.println(tim);
+}
 
 public static void main(String[] args)
     {
@@ -64,5 +77,6 @@ public static void main(String[] args)
         perfectNumber();
         primeNummber();
         reverseNumber();
+        stopWatch();
     }
 }
