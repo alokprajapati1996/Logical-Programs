@@ -11,25 +11,47 @@ public class LgicalPrograms {
             n2 = n3;
         }
     }
-    public static void perfectNumber(){
-        int num=28;
-        int sum=0;
-        int temp=num;
-        for(int i=1;i<=num/2;i++){
-            if(num%i==0){
-                sum+=i;
+
+    public static void perfectNumber() {
+        int num = 28;
+        int sum = 0;
+        int temp = num;
+        for (int i = 1; i <= num / 2; i++) {
+            if (num % i == 0) {
+                sum += i;
             }
         }
-        if(sum==temp){
+        if (sum == temp) {
             System.out.println("Number is perfect");
-        }else{
+        } else {
             System.out.println("Number is not perfect");
         }
     }
-    public static void main(String[] args)
+
+    public static void primeNummber() {
+        int i, flag = 0;
+        int n = 3;
+        if (n == 0 || n == 1) {
+            System.out.println(n + " is not prime number");
+        } else {
+            for (i = 2; i <= n / 2; i++) {
+                if (n % i == 0) {
+                    System.out.println(n + " is not prime number");
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                System.out.println(n + " is prime number");
+            }
+        }
+    }
+
+public static void main(String[] args)
     {
         System.out.println("welcome to logical program");
         fibonacciSeries();
         perfectNumber();
+        primeNummber();
     }
 }
