@@ -46,6 +46,16 @@ public class LgicalPrograms {
             }
         }
     }
+    public static void reverseNumber(){
+    int number = 987654, reverse = 0;
+     while(number != 0)
+    {
+        int remainder = number % 10;
+        reverse = reverse * 10 + remainder;
+        number = number/10;
+    }
+     System.out.println("The reverse of the given number is: " + reverse);
+}
 
 public static void main(String[] args)
     {
@@ -53,5 +63,6 @@ public static void main(String[] args)
         fibonacciSeries();
         perfectNumber();
         primeNummber();
+        reverseNumber();
     }
 }
