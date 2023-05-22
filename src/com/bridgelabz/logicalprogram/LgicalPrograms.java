@@ -11,9 +11,25 @@ public class LgicalPrograms {
             n2 = n3;
         }
     }
+    public static void perfectNumber(){
+        int num=28;
+        int sum=0;
+        int temp=num;
+        for(int i=1;i<=num/2;i++){
+            if(num%i==0){
+                sum+=i;
+            }
+        }
+        if(sum==temp){
+            System.out.println("Number is perfect");
+        }else{
+            System.out.println("Number is not perfect");
+        }
+    }
     public static void main(String[] args)
     {
         System.out.println("welcome to logical program");
         fibonacciSeries();
+        perfectNumber();
     }
 }
